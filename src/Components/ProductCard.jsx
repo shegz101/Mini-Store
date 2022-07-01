@@ -1,12 +1,12 @@
 import React from "react";
 import '../App.css';
-// import { useStateValue } from "../Context/Cart/CartContext";
+import { useStateValue } from "../CartPath/CartContext";
 
 const ProductCard = ({product}) => {
-//   const { addToCart,cartItems } = useStateValue();
-//   const isInCart = (product) => {
-//     return !!cartItems.find((item) => item.id === product.id);
-//   };
+  const { addToCart,cartObject } = useStateValue();
+  const isInCart = (product) => {
+    return !!cartObject.find((item) => item.id === product.id);
+  };
     return ( 
         <div className="product-card">
            <p className="cartegory-text">{product.category.toUpperCase()}</p>
@@ -21,13 +21,12 @@ const ProductCard = ({product}) => {
              <p>Price: {'$' + product.price}</p>
            </div>
            <div>
-           <button className="cart-button">Add To Cart</button>
-              {/* {isInCart(product) && (
+              {isInCart(product) && (
                 <button className="cart-btn">In Cart</button>
               )}
               {!isInCart(product) && (
                 <button onClick={() => {addToCart(product)}} className="cart-button">Add To Cart</button>
-              )}   */}
+              )}  
            </div>
         </div>
      );

@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import { BsCartPlusFill } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClear } from 'react-icons/md';
+import { useStateValue } from "../CartPath/CartContext";
 
 const Header = () => {
+  const { cartObject } = useStateValue();
   const [toggle, setToggle] = useState(false);
   const [showNav, setShowNav] = useState(false);
     return ( 
@@ -37,8 +39,8 @@ const Header = () => {
             </nav>
             
             <div>
-              <p onClick={() => setToggle(!toggle)} className="cart-icon"><BsCartPlusFill/></p>
-              <div className="cart-item"><span>0</span></div>
+              <Link to="/cart"><p onClick={() => setToggle(!toggle)} className="cart-icon"><BsCartPlusFill/></p></Link>
+              <div className="cart-item"><span>{cartObject?.length}</span></div>
             </div>
         </div>
      );
