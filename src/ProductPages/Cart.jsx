@@ -2,10 +2,10 @@ import React from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom'
 import CartObj from './CartObj';
-import { useStateValue } from '../CartPath/CartContext';
+import { useStateValue } from '../CartPath/context';
 
 const Cart = () => {
-    const { cartObject, handleCheckout, checkout, itemCount, total, clearCart } = useStateValue();
+    const { cartObject, checkOut, check, itemCount, total, clearCart } = useStateValue();
     return (
         <div className="cart-section">
             <div className='cart-header'>
@@ -16,11 +16,11 @@ const Cart = () => {
             <div className='cart-head'>
                 <p className='total-item'>Total Items: { itemCount }</p>
                 <p className='total-price'>Total Price: { '$' + total }</p>
-                <button className="checkout-btn" onClick={handleCheckout}>Checkout</button>
+                <button className="checkout-btn" onClick={checkOut}>Checkout</button>
             </div>
 
             {
-                checkout && (
+                check && (
                     <div className='empty-cart'>
                         <h1>Thank you for patronizing us!</h1>
                         <p>Your order will get to you shortly</p>

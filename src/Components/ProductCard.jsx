@@ -1,8 +1,8 @@
 import React from "react";
 import '../App.css';
-import { useStateValue } from "../CartPath/CartContext";
+import { useStateValue } from "../CartPath/context";
 
-const ProductCard = ({product}) => {
+const ProductCard = ({ product }) => {
   const { addToCart,cartObject } = useStateValue();
   const isInCart = (product) => {
     return !!cartObject.find((item) => item.id === product.id);

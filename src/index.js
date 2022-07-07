@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import CartProvider from './CartPath/CartProvider';
+import { Provider } from './CartPath/context';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CartProvider>
-       <App />
-    </CartProvider>
+    <Provider>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

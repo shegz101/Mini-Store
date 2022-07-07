@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import { BsCartPlusFill } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClear } from 'react-icons/md';
-import { useStateValue } from "../CartPath/CartContext";
+import { useStateValue } from "../CartPath/context";
 
 const Header = () => {
   const { cartObject } = useStateValue();
   const [toggle, setToggle] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  console.log(cartObject);
     return ( 
         <div className="Header-section">
             <div>
