@@ -5,7 +5,7 @@ import CartObj from './CartObj';
 import { useStateValue } from '../CartPath/context';
 
 const Cart = () => {
-    const { cartObject, checkOut, check, itemCount, total, clearCart } = useStateValue();
+    const { cartObject, checkOut, check, total_item, total_price, clearCart } = useStateValue();
     return (
         <div className="cart-section">
             <div className='cart-header'>
@@ -14,8 +14,8 @@ const Cart = () => {
             </div>
 
             <div className='cart-head'>
-                <p className='total-item'>Total Items: { itemCount }</p>
-                <p className='total-price'>Total Price: { '$' + total }</p>
+                <p className='total-item'>Total Items: { total_item }</p>
+                <p className='total-price'>Total Price: { '$' + total_price }</p>
                 <button className="checkout-btn" onClick={checkOut}>Checkout</button>
             </div>
 

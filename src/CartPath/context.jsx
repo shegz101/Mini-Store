@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 import reducer from './reducer';
-import { sumItems } from './reducer';
+import { sumObject } from './reducer';
 
 //creating a context object
 const Context = createContext();
@@ -9,7 +9,7 @@ export const Provider = ({ children }) => {
     //defining the initial state
     const initialState = {
         cartObject: [],
-        ...sumItems([]),
+        ...sumObject([]),
         check: false,
     }
     //defining the cart object
