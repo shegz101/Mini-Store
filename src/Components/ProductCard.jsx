@@ -5,7 +5,7 @@ import { useStateValue } from "../CartPath/context";
 const ProductCard = ({ product }) => {
   const { addToCart,cartObject } = useStateValue();
   const isInCart = (product) => {
-    return !!cartObject.find((item) => item.id === product.id);
+    return !!cartObject.find((item) => item.id === product.id); //this returns a boolean value
   };
     return ( 
         <div className="product-card">
