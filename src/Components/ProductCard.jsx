@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
                <p className="description-text">{product.description}</p>
            </div>
            <div className="price-text">
-             <p>Price: {'$' + product.price}</p>
+             <p className="price-info">Price: {'$' + product.price}</p>
            </div>
            <div>
               {isInCart(product) && (

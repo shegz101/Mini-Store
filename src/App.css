@@ -449,8 +449,13 @@
     line-height: 115px;
     text-align: center;
   }
-  .price-text {
+  /* .price-text {
     padding: 5px 15% 0 15%;
+  } */
+  .price-info {
+    text-align: center;
+    justify-content: center;
+    padding: 5px 0 0 0;
   }
   .cart-section {
     overflow-x: hidden;
@@ -544,6 +549,11 @@
   }
   .price-text {
     padding: 5px 28% 0 28%;
+  }
+  .price-info {
+    text-align: center;
+    justify-content: center;
+    padding: 5px 0 0 0;
   }
   .cart-section {
     overflow-x: hidden;
