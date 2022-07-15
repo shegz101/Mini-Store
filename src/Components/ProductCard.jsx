@@ -4,6 +4,7 @@ import { useStateValue } from "../CartPath/context";
 
 const ProductCard = ({ product }) => {
   const { addToCart,cartObject } = useStateValue();
+  //check if an item exists in the cart, return true
   const isInCart = (product) => {
     return !!cartObject.find((item) => item.id === product.id); //this returns a boolean value
   };
